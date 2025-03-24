@@ -5,6 +5,7 @@ import HeroSection from '../components/HeroSection.astro';
 import Stats from '../components/Stats.astro';
 import Features from '../components/Features.astro';
 import Posti from '../components/Posti.astro';
+import Header from '../components/Header.astro';
 import "../styles/global.css";
 ---
 
@@ -28,9 +29,7 @@ import "../styles/global.css";
 		/>
 	</head>
 	<body class="bg-gray-800 dark:bg-gray-900 mt-5">
- 		<div class="container mx-auto flex items-center justify-between">
-			<img src="../../public/logo.png" alt="Logo Tap System" class="w-24 h-auto">
- 		</div>
+	<Header/>
  	<main class="space-y-30 mb-20">
 			<HeroSection/>
 			<Features/>
