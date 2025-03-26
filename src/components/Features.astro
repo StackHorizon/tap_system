@@ -4,13 +4,14 @@ import Container from "./Container.astro"
 <style>
     /* Stili generali */
     .title {
-        font-size: 3rem;
+        font-size: 3rem; /* Grandezza di base */
         font-weight: bold;
         color: #ffffff;
         margin-bottom: 50px;
         text-align: center;
     }
 
+    /* Contenitore */
     .locations-container {
         display: flex;
         flex-wrap: wrap;
@@ -19,6 +20,7 @@ import Container from "./Container.astro"
         margin: 0 20px;
     }
 
+    /* Elementi */
     .location-item {
         background-color: #1a202c;
         color: #ffffff;
@@ -30,18 +32,22 @@ import Container from "./Container.astro"
         transition: background-color 0.3s ease;
     }
 
+    /* Effetto hover */
     .location-item:hover {
         background-color: #2d3748;
     }
 
+    /* Icone */
     .icon {
         margin-bottom: 34px;
+        max-width: 100%;
+        height: auto;
     }
 
-    /* Responsive Design */
+    /* ✅ Aggiunto responsive per iPhone */
     @media (max-width: 768px) {
         .title {
-            font-size: 2.5rem; /* Più grande su mobile */
+            font-size: 2.5rem; /* Ingrandisce il titolo su schermi piccoli */
         }
 
         .locations-container {
@@ -49,30 +55,32 @@ import Container from "./Container.astro"
         }
 
         .location-item {
-            font-size: 1.4rem; /* Testo ancora più leggibile su mobile */
-            padding: 20px 24px;
+            font-size: 1.5rem; /* Ingrandisce il testo */
+            padding: 22px 26px;
         }
 
-        .location-item img {
+        .icon {
             width: 80px; /* Adatta le immagini */
             height: auto;
         }
     }
 
+    /* Per schermi più piccoli (es. iPhone SE) */
     @media (max-width: 480px) {
         .title {
             font-size: 2.2rem;
         }
 
         .location-item {
-            font-size: 1.5rem; /* Testo più grande per visibilità */
-            padding: 22px 26px;
+            font-size: 1.6rem; /* Ancora più grande per la leggibilità */
+            padding: 24px 28px;
         }
 
-        .location-item img {
+        .icon {
             width: 90px;
         }
     }
+
 </style>
 
 <div id="features">
