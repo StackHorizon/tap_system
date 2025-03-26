@@ -3,10 +3,11 @@ import Container from "./Container.astro"
 ---
 <style>
     .title {
-        font-size: 2rem;
+        font-size: 2.5rem; /* Ingrandito per maggiore leggibilità */
         font-weight: bold;
         color: #ffffff;
         margin-bottom: 40px;
+        text-align: center;
     }
 
     .locations-container {
@@ -20,10 +21,10 @@ import Container from "./Container.astro"
     .location-item {
         background-color: #1a202c;
         color: #ffffff;
-        padding: 16px 24px;
+        padding: 18px 26px;
         border-radius: 8px;
-        font-size: 1.1rem;
-        font-weight: 600;
+        font-size: 1.3rem; /* Testo più grande */
+        font-weight: 700;
         text-align: center;
         transition: background-color 0.3s ease;
     }
@@ -32,116 +33,103 @@ import Container from "./Container.astro"
         background-color: #2d3748;
     }
 
-    @media (max-width: 768px) {
-        .locations-container {
-            gap: 12px;
-        }
-
-        .location-item {
-            font-size: 1rem;
-            padding: 14px 18px;
-        }
-    }
-
     .icon {
         margin-bottom: 34px;
     }
+
+    /* Miglioramento leggibilità su mobile */
+    @media (max-width: 768px) {
+        .locations-container {
+            gap: 15px;
+        }
+
+        .location-item {
+            font-size: 1.4rem; /* Testo più grande per mobile */
+            padding: 20px 24px;
+        }
+
+        h2 {
+            font-size: 2.2rem !important; /* Rende il titolo più grande e leggibile */
+            text-align: center;
+        }
+
+        h5 {
+            font-size: 1.6rem !important; /* Ingrandisce i sottotitoli */
+        }
+
+        p {
+            font-size: 1.3rem !important; /* Testo più grande per una lettura più facile */
+            line-height: 1.8; /* Aumenta la spaziatura per migliorare la leggibilità */
+            color: #f1f1f1; /* Maggiore contrasto con lo sfondo */
+        }
+    }
+
+    /* Miglioramento del contrasto generale */
+    .text-gray-600 {
+        color: #e0e0e0 !important; /* Testo più chiaro per maggiore leggibilità */
+    }
+
+    .dark .text-gray-300 {
+        color: #ffffff !important; /* Testo bianco per maggiore contrasto */
+    }
 </style>
+
 <div id="features">
     <Container>
         <div class="space-y-10">
             <h2 class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white">
                 I nostri servizi e offerte
             </h2>
-            <div
-                    class="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4"
-            >
+            <div class="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4">
+
                 <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
                     <div class="relative space-y-8 py-12 p-8">
-
-                        <img
-                                src="https://cdn-icons-png.flaticon.com/512/5532/5532931.png"
-                                class="w-12"
-                                width="512"
-                                height="512"
-                                alt="Manutenzione tapparelle"
-                        />
-
+                        <img src="https://cdn-icons-png.flaticon.com/512/5532/5532931.png" class="w-12" width="512" height="512" alt="Manutenzione tapparelle"/>
                         <div class="space-y-2">
-                            <h5
-                                    class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
-                            >Preventivi gratuiti
+                            <h5 class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
+                                Preventivi gratuiti
                             </h5>
                             <p class="text-gray-600 dark:text-gray-300">
                                 Richiedi un preventivo gratuito per le tue tapparelle: ti risponderemo in tempi brevi.
                             </p>
                         </div>
-
                     </div>
                 </div>
+
                 <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
                     <div class="relative space-y-8 py-12 p-8">
-                        <img
-                                src="https://cdn-icons-png.flaticon.com/512/5285/5285806.png"
-                                class="w-12"
-                                width="512"
-                                height="512"
-                                alt="Preventivo gratuito"
-                        />
+                        <img src="https://cdn-icons-png.flaticon.com/512/5285/5285806.png" class="w-12" width="512" height="512" alt="Preventivo gratuito"/>
                         <div class="space-y-2">
-                            <h5
-                                    class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
-                            >
+                            <h5 class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
                                 Sostituzione, manutenzione e riparazione di tapparelle
                             </h5>
                             <p class="text-gray-600 dark:text-gray-300">
-                                Sostituzione e riparazione di tapparelle di sicurezza - acciaio - alluminio coibentato - PVC
+                                Sostituzione e riparazione di tapparelle di sicurezza - acciaio - alluminio coibentato - PVC.
                             </p>
                         </div>
-
                     </div>
                 </div>
+
                 <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
                     <div class="relative space-y-8 py-12 p-8">
-                        <img
-                                src="https://cdn-icons-png.flaticon.com/512/2778/2778814.png"
-                                class="w-12"
-                                width="512"
-                                height="512"
-                                alt="Motorizzazione tapparelle"
-                        />
-
+                        <img src="https://cdn-icons-png.flaticon.com/512/2778/2778814.png" class="w-12" width="512" height="512" alt="Motorizzazione tapparelle"/>
                         <div class="space-y-2">
-                            <h5
-                                    class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
-                            >
+                            <h5 class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
                                 Motorizzazione tapparelle
                             </h5>
                             <p class="text-gray-600 dark:text-gray-300">
-                                Trasformazione di tapparelle manuali in automatiche: comodit&#224; e sicurezza a portata di mano.
+                                Trasformazione di tapparelle manuali in automatiche: comodità e sicurezza a portata di mano.
                             </p>
                         </div>
-
                     </div>
                 </div>
-                <div
-                        class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10"
-                >
-                    <div
-                            class="relative space-y-8 py-12 p-8 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800"
-                    >
-                        <img
-                                src="https://cdn-icons-png.flaticon.com/512/3079/3079162.png"
-                                class="w-12"
-                                width="512"
-                                height="512"
-                                alt="Sostituzione accessori"
-                        />
 
+                <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+                    <div class="relative space-y-8 py-12 p-8 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3079/3079162.png" class="w-12" width="512" height="512" alt="Sostituzione accessori"/>
                         <div class="space-y-2">
-                            <h5
-                                    class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
-                            >Sostituzioni accessori tapparelle
+                            <h5 class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
+                                Sostituzioni accessori tapparelle
                             </h5>
                             <p class="text-gray-600 dark:text-gray-300">
                                 Sostituzione di accessori per tapparelle come corde e altri componenti.
@@ -149,6 +137,7 @@ import Container from "./Container.astro"
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </Container>
