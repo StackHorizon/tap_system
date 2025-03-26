@@ -4,10 +4,9 @@ import Container from "./Container.astro";
 
 <style>
     .title {
-        font-size: 2rem;
+        font-size: 3rem;
         font-weight: bold;
-        color: #ffffff;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
     }
 
     .locations-container {
@@ -18,18 +17,41 @@ import Container from "./Container.astro";
         margin: 0 20px;
     }
 
+    /* Imposta lo sfondo e il testo in base al tema */
     .location-item {
-        background-color: #1a202c;
-        color: #ffffff;
         padding: 16px 24px;
         border-radius: 8px;
         font-size: 1.1rem;
         font-weight: 600;
         text-align: center;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        border: 1px solid #ddd;
     }
 
+    /* Modalità chiara */
+    :root .location-item {
+        background-color: #ffffff; /* Bianco */
+        color: #1a202c; /* Testo scuro */
+    }
 
+    /* Modalità scura */
+    :root.dark .location-item {
+        background-color: #1a202c; /* Scuro */
+        color: #ffffff; /* Testo bianco */
+        border: 1px solid #2d3748;
+    }
+
+    /* Effetto hover */
+    .location-item:hover {
+        background-color: #f9fafb;
+        transform: scale(1.05);
+    }
+
+    .dark .location-item:hover {
+        background-color: #2d3748;
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
         .locations-container {
             gap: 12px;
@@ -40,112 +62,43 @@ import Container from "./Container.astro";
             padding: 14px 18px;
         }
     }
-
-    .icon {
-        margin-bottom: 34px;
-    }
 </style>
 
 <Container>
-     <div class="space-y-10">
-         <h2 class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white">Le nostre sedi di lavoro</h2>
+    <div class="space-y-10">
+        <h2 class="title font-bold text-gray-900 dark:text-white text-center">
+            Le nostre sedi di lavoro
+        </h2>
         <div class="locations-container">
-            <div class="location-item">
-                Milano
-            </div>
-            <div class="location-item">
-                Opera
-            </div>
-            <div class="location-item">
-                San Donato Milanese
-            </div>
-            <div class="location-item">
-                San Giuliano Milanese
-            </div>
-            <div class="location-item">
-                Segrate
-            </div>
-
-            <!-- Aggiungi altre città qui -->
-            <div class="location-item">
-                Pioltello
-            </div>
-            <div class="location-item">
-                Gorgonzola
-            </div>
-            <div class="location-item">
-                Agrate Brianza
-            </div>
-            <div class="location-item">
-                Cernusco sul Naviglio
-            </div>
-            <div class="location-item">
-                Brugherio
-            </div>
-
-            <div class="location-item">
-                Concorezzo
-            </div>
-            <div class="location-item">
-                Vimercate
-            </div>
-            <div class="location-item">
-                Arcore
-            </div>
-            <div class="location-item">
-                Carugate
-            </div>
-            <div class="location-item">
-                Cassina de'Pecchi
-            </div>
-
-            <div class="location-item">
-                Monza
-            </div>
-            <div class="location-item">
-                Muggi&#242;
-            </div>
-            <div class="location-item">
-                Sesto San Giovanni
-            </div>
-            <div class="location-item">
-                Lissone
-            </div>
-            <div class="location-item">
-                Bresso
-            </div>
-
-            <div class="location-item">
-                Cusano Milanino
-            </div>
-            <div class="location-item">
-                Cinisello Balsamo
-            </div>
-            <div class="location-item">
-                Paderno Dugnano
-            </div>
-            <div class="location-item">
-                Nova Milanese
-            </div>
-            <div class="location-item">
-                Bruzzano
-            </div>
-
-            <div class="location-item">
-                Milano 2
-            </div>
-            <div class="location-item">
-                Pioltello
-            </div>
-            <div class="location-item">
-                Vimodrone
-            </div>
-            <div class="location-item">
-                Cologno Monzese
-            </div>
-            <div class="location-item">
-                Gessate
-            </div>
+            <div class="location-item">Milano</div>
+            <div class="location-item">Opera</div>
+            <div class="location-item">San Donato Milanese</div>
+            <div class="location-item">San Giuliano Milanese</div>
+            <div class="location-item">Segrate</div>
+            <div class="location-item">Pioltello</div>
+            <div class="location-item">Gorgonzola</div>
+            <div class="location-item">Agrate Brianza</div>
+            <div class="location-item">Cernusco sul Naviglio</div>
+            <div class="location-item">Brugherio</div>
+            <div class="location-item">Concorezzo</div>
+            <div class="location-item">Vimercate</div>
+            <div class="location-item">Arcore</div>
+            <div class="location-item">Carugate</div>
+            <div class="location-item">Cassina de' Pecchi</div>
+            <div class="location-item">Monza</div>
+            <div class="location-item">Muggiò</div>
+            <div class="location-item">Sesto San Giovanni</div>
+            <div class="location-item">Lissone</div>
+            <div class="location-item">Bresso</div>
+            <div class="location-item">Cusano Milanino</div>
+            <div class="location-item">Cinisello Balsamo</div>
+            <div class="location-item">Paderno Dugnano</div>
+            <div class="location-item">Nova Milanese</div>
+            <div class="location-item">Bruzzano</div>
+            <div class="location-item">Milano 2</div>
+            <div class="location-item">Vimodrone</div>
+            <div class="location-item">Cologno Monzese</div>
+            <div class="location-item">Gessate</div>
         </div>
     </div>
 </Container>
