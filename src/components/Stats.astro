@@ -14,6 +14,7 @@ import Container from "./Container.astro";
     .rapidita {
         color: rgb(151, 193, 92);
     }
+
     .title {
         font-size: 3rem; /* Grandezza di base */
         font-weight: bold;
@@ -39,12 +40,18 @@ import Container from "./Container.astro";
             width: 50px; /* Rende le icone più visibili */
             height: 50px;
         }
+
+        /* Invertire l'ordine degli elementi su schermi piccoli */
+        .content-container {
+            display: flex;
+            flex-direction: column-reverse; /* Invertiamo l'ordine su dispositivi piccoli */
+        }
     }
 </style>
 
 <div id="solution">
     <Container>
-        <div class="space-y-6 text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
+        <div class="space-y-6 text-gray-600 md:flex content-container md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
             <div class="md:w-5/12 lg:w-1/2">
                 <img src="https://cdn-icons-png.flaticon.com/512/3589/3589868.png"
                      alt="Grafico a torta"
@@ -54,7 +61,7 @@ import Container from "./Container.astro";
                 <h2 class="title text-3xl font-bold text-gray-900 md:text-4xl dark:text-white">
                     Scegli il meglio della tua zona, scegli Tap System
                 </h2>
-                <h5 class="text-xl  text-gray-700 dark:text-white">
+                <h5 class="text-xl text-gray-700 dark:text-white">
                     Con oltre 20 anni di esperienza, ci specializziamo nella progettazione, produzione e installazione di tapparelle di sicurezza in alluminio coibentato e PVC rinforzato. Offriamo soluzioni su misura per garantire massima protezione, efficienza energetica e design moderno, supportate da un servizio di assistenza dedicato.
                 </h5>
                 <div class="divide-y space-y-4 divide-gray-100 dark:divide-gray-800">
@@ -67,7 +74,7 @@ import Container from "./Container.astro";
                             </svg>
                         </div>
                         <div class="w-5/6">
-                            <h5 class="text-xl  text-gray-700 dark:text-white rapidita">Rapidità</h5>
+                            <h5 class="text-xl text-gray-700 dark:text-white rapidita">Rapidità</h5>
                             <p class="text-lg text-gray-500 dark:text-gray-400">Tempi di risposta più veloci, garantendo assistenza immediata.</p>
                         </div>
                     </div>
@@ -78,11 +85,11 @@ import Container from "./Container.astro";
                             </svg>
                         </div>
                         <div class="w-5/6">
-                            <h5 class="text-xl  text-gray-700 dark:text-white efficienza">Efficienza</h5>
+                            <h5 class="text-xl text-gray-700 dark:text-white efficienza">Efficienza</h5>
                             <p class="text-lg text-gray-500 dark:text-gray-400">Lavori eseguiti da tecnici esperti con materiali di alta qualità, per soluzioni durature.</p>
                         </div>
                     </div>
-                    <div class="pt-4 flex gap-4 md:items-center ">
+                    <div class="pt-4 flex gap-4 md:items-center">
                         <div class="w-12 h-12 flex items-center justify-center rounded-full bg-teal-100 dark:bg-teal-900/20">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 puntualita">
                                 <circle cx="12" cy="12" r="10"/>
@@ -90,7 +97,7 @@ import Container from "./Container.astro";
                             </svg>
                         </div>
                         <div class="w-5/6">
-                            <h5 class="text-xl  text-gray-700 dark:text-white puntualita">Puntualità</h5>
+                            <h5 class="text-xl text-gray-700 dark:text-white puntualita">Puntualità</h5>
                             <p class="text-lg text-gray-500 dark:text-gray-400">Siamo sempre puntuali e precisi nel rispettare le scadenze stabilite.</p>
                         </div>
                     </div>
