@@ -6,8 +6,12 @@ import Container from "./Container.astro"
     .title {
         font-size: 3rem; /* Grandezza di base */
         font-weight: bold;
-        color: #ffffff;
+        color: #ffffff; /* Nero di default */
         margin-bottom: 50px;
+    }
+
+    .dark .title {
+        color: #ffffff; /* Bianco in modalità scura */
     }
 
     /* Contenitore */
@@ -43,10 +47,10 @@ import Container from "./Container.astro"
         height: auto;
     }
 
-    /* ✅ Aggiunto responsive per iPhone */
+    /* Responsive per iPhone */
     @media (max-width: 768px) {
         .title {
-            font-size: 2.5rem; /* Ingrandisce il titolo su schermi piccoli */
+            font-size: 2.5rem;
         }
 
         .locations-container {
@@ -54,12 +58,12 @@ import Container from "./Container.astro"
         }
 
         .location-item {
-            font-size: 1.5rem; /* Ingrandisce il testo */
+            font-size: 1.5rem;
             padding: 22px 26px;
         }
 
         .icon {
-            width: 80px; /* Adatta le immagini */
+            width: 80px;
             height: auto;
         }
     }
@@ -71,7 +75,7 @@ import Container from "./Container.astro"
         }
 
         .location-item {
-            font-size: 1.6rem; /* Ancora più grande per la leggibilità */
+            font-size: 1.6rem;
             padding: 24px 28px;
         }
 
@@ -79,13 +83,12 @@ import Container from "./Container.astro"
             width: 90px;
         }
     }
-
 </style>
 
 <div id="features">
     <Container>
         <div class="space-y-12">
-            <h2 class="title dark: text-gray-300">I nostri servizi e offerte</h2>
+            <h2 class="title dark:text-white">I nostri servizi e offerte</h2>
             <div
                     class="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4"
             >
@@ -99,7 +102,7 @@ import Container from "./Container.astro"
                         />
                         <div class="space-y-2">
                             <h5 class="text-2xl font-semibold text-gray-700 dark:text-white">Preventivi gratuiti</h5>
-                            <p class="text-lg text-gray-600 dark:text-gray-300">
+                            <p class="text-xl text-gray-500 dark:text-gray-300">
                                 Richiedi un preventivo gratuito per le tue tapparelle: ti risponderemo in tempi brevi.
                             </p>
                         </div>
@@ -116,7 +119,7 @@ import Container from "./Container.astro"
                         />
                         <div class="space-y-2">
                             <h5 class="text-2xl font-semibold text-gray-700 dark:text-white">Riparazione tapparelle</h5>
-                            <p class="text-lg text-gray-600 dark:text-gray-300">
+                            <p class="text-xl text-gray-500 dark:text-gray-300">
                                 Sostituzione e riparazione di tapparelle in acciaio, alluminio coibentato e PVC.
                             </p>
                         </div>
@@ -133,7 +136,7 @@ import Container from "./Container.astro"
                         />
                         <div class="space-y-2">
                             <h5 class="text-2xl font-semibold text-gray-700 dark:text-white">Motorizzazione tapparelle</h5>
-                            <p class="text-lg text-gray-600 dark:text-gray-300">
+                            <p class="text-xl text-gray-500 dark:text-gray-300">
                                 Trasformiamo tapparelle manuali in automatiche per maggiore comodità e sicurezza.
                             </p>
                         </div>
@@ -150,7 +153,7 @@ import Container from "./Container.astro"
                         />
                         <div class="space-y-2">
                             <h5 class="text-2xl font-semibold text-gray-700 dark:text-white">Sostituzione accessori</h5>
-                            <p class="text-lg text-gray-600 dark:text-gray-300">
+                            <p class="text-xl text-gray-500 dark:text-gray-300">
                                 Sostituiamo corde e accessori per tapparelle per garantirne il corretto funzionamento.
                             </p>
                         </div>

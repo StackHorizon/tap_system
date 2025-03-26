@@ -18,7 +18,6 @@ import Container from "./Container.astro";
     .title {
         font-size: 3rem; /* Grandezza di base */
         font-weight: bold;
-        color: #ffffff;
         margin-bottom: 50px;
     }
 
@@ -44,7 +43,7 @@ import Container from "./Container.astro";
         /* Invertire l'ordine degli elementi su schermi piccoli */
         .content-container {
             display: flex;
-            flex-direction: column-reverse; /* Invertiamo l'ordine su dispositivi piccoli */
+            flex-direction: column-reverse;
         }
     }
 </style>
@@ -58,10 +57,10 @@ import Container from "./Container.astro";
                      class="w-full">
             </div>
             <div class="md:w-7/12 lg:w-1/2">
-                <h2 class="title text-3xl font-bold text-gray-900 md:text-4xl dark: text-gray-300">
+                <h2 class="title text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
                     Scegli il meglio della tua zona, scegli Tap System
                 </h2>
-                <h5 class="text-xl text-gray-700 dark: text-gray-300">
+                <h5 class="text-2xl text-gray-700 dark:text-gray-300">
                     Con oltre 20 anni di esperienza, ci specializziamo nella progettazione, produzione e installazione di tapparelle di sicurezza in alluminio coibentato e PVC rinforzato. Offriamo soluzioni su misura per garantire massima protezione, efficienza energetica e design moderno, supportate da un servizio di assistenza dedicato.
                 </h5>
                 <div class="divide-y space-y-4 divide-gray-100 dark:divide-gray-800">
@@ -74,8 +73,10 @@ import Container from "./Container.astro";
                             </svg>
                         </div>
                         <div class="w-5/6">
-                            <h5 class="text-xl text-gray-700 dark:text-white rapidita">Rapidità</h5>
-                            <p class="text-lg text-gray-500 dark:text-gray-300">Tempi di risposta più veloci, garantendo assistenza immediata.</p>
+                            <h5 class="text-2xl text-gray-700 dark:text-white rapidita">Rapidità</h5>
+                            <p class="text-xl text-gray-500 dark:text-gray-300">
+                                Tempi di risposta più veloci, garantendo assistenza immediata.
+                            </p>
                         </div>
                     </div>
                     <div class="pt-4 flex gap-4 md:items-center">
@@ -85,8 +86,10 @@ import Container from "./Container.astro";
                             </svg>
                         </div>
                         <div class="w-5/6">
-                            <h5 class="text-xl text-gray-700 dark:text-white efficienza">Efficienza</h5>
-                            <p class="text-lg text-gray-500 dark:text-gray-300">Lavori eseguiti da tecnici esperti con materiali di alta qualità, per soluzioni durature.</p>
+                            <h5 class="text-2xl text-gray-700 dark:text-white efficienza">Efficienza</h5>
+                            <p class="text-xl text-gray-500 dark:text-gray-300">
+                                Lavori eseguiti da tecnici esperti con materiali di alta qualità, per soluzioni durature.
+                            </p>
                         </div>
                     </div>
                     <div class="pt-4 flex gap-4 md:items-center">
@@ -97,8 +100,10 @@ import Container from "./Container.astro";
                             </svg>
                         </div>
                         <div class="w-5/6">
-                            <h5 class="text-xl text-gray-700 dark:text-white puntualita">Puntualità</h5>
-                            <p class="text-lg text-gray-500 dark:text-gray-300">Siamo sempre puntuali e precisi nel rispettare le scadenze stabilite.</p>
+                            <h5 class="text-2xl text-gray-700 dark:text-white puntualita">Puntualità</h5>
+                            <p class="text-xl text-gray-500 dark:text-gray-300">
+                                Siamo sempre puntuali e precisi nel rispettare le scadenze stabilite.
+                            </p>
                         </div>
                     </div>
                 </div>
