@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+/* Aggiungi questo nel tuo global.css per creare uno sfondo gradiente dinamico */
+html[data-theme="dark"] {
+    background: linear-gradient(to bottom right, #2c3e50, #34495e); /* Gradiente per il tema scuro */
+}
+
+html[data-theme="light"] {
+    background: linear-gradient(to bottom right, #fbc2eb, #a6c1ee); /* Gradiente per il tema chiaro */
+}
