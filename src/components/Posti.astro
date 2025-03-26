@@ -1,7 +1,6 @@
 ---
 import Container from "./Container.astro";
 ---
-
 <style>
     .title {
         font-size: 3rem;
@@ -24,32 +23,11 @@ import Container from "./Container.astro";
         font-weight: 600;
         text-align: center;
         transition: background-color 0.3s ease, transform 0.2s ease;
-        border: 1px solid #ddd;
+        background-color: white; /* Imposta lo sfondo chiaro di default */
     }
 
-    /* Modalità chiara */
-    .location-item {
-        background-color: #ffffff; /* Bianco */
-        color: #1a202c; /* Testo scuro */
-        border: 1px solid #ddd;
-    }
-
-    /* Modalità scura */
-    html.dark .location-item {
-        background-color: #1a202c; /* Scuro */
-        color: #ffffff; /* Testo bianco */
-        border: 1px solid #2d3748;
-    }
-
-    /* Hover */
-    .location-item:hover {
-        background-color: #f9fafb;
-        transform: scale(1.05);
-    }
-
-    /* Modalità scura: hover */
-    html.dark .location-item:hover {
-        background-color: #2d3748;
+    .location-item.dark\:bg-gray-800 {
+        background-color: #2d3748; /* Sfondi scuri se il tema è scuro */
     }
 
     /* Responsive */
@@ -67,96 +45,149 @@ import Container from "./Container.astro";
 
 <Container>
     <div class="space-y-10">
-        <h2 class="title font-bold text-gray-900 dark:text-white text-center">
+        <h2 class="title font-bold text-gray-900 dark:text-white">
             Le nostre sedi di lavoro
         </h2>
         <div class="locations-container">
-            <div class="location-item">
-                Milano
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Milano
+                </p>
             </div>
-            <div class="location-item">
-                Opera
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Opera
+                </p>
             </div>
-            <div class="location-item">
-                San Donato Milanese
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    San Donato Milanese
+                </p>
             </div>
-            <div class="location-item">
-                Gessate
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Gessate
+                </p>
             </div>
-            <div class="location-item">
-                Segrate
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Segrate
+                </p>
             </div>
-            <div class="location-item">
-                Pioltello
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Pioltello
+                </p>
             </div>
-            <div class="location-item">
-                Gorgonzola
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Gorgonzola
+                </p>
             </div>
-            <div class="location-item">
-                Agrate Brianza
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Agrate Brianza
+                </p>
             </div>
-            <div class="location-item">
-                Cernusco sul Naviglio
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Cernusco sul Naviglio
+                </p>
             </div>
-            <div class="location-item">
-                Brugherio
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Brugherio
+                </p>
             </div>
-            <div class="location-item">
-                Concorezzo
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Concorezzo
+                </p>
             </div>
-            <div class="location-item">
-                Vimercate
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Vimercate
+                </p>
             </div>
-            <div class="location-item">
-                Arcore
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Arcore
+                </p>
             </div>
-            <div class="location-item">
-                Carugate
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Carugate
+                </p>
             </div>
-            <div class="location-item">
-                Cassina de' Pecchi
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Cassina de' Pecchi
+                </p>
             </div>
-            <div class="location-item">
-                Monza
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Monza
+                </p>
             </div>
-            <div class="location-item">
-                Muggiò
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Muggiò
+                </p>
             </div>
-            <div class="location-item">
-                Sesto San Giovanni
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Sesto San Giovanni
+                </p>
             </div>
-            <div class="location-item">
-                Lissone
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Lissone
+                </p>
             </div>
-            <div class="location-item">
-                Bresso
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Bresso
+                </p>
             </div>
-            <div class="location-item">
-                Cusano Milanino
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Cusano Milanino
+                </p>
             </div>
-            <div class="location-item">
-                Cinisello Balsamo
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Cinisello Balsamo
+                </p>
             </div>
-            <div class="location-item">
-                Paderno Dugnano
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Paderno Dugnano
+                </p>
             </div>
-            <div class="location-item">
-                Nova Milanese
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Nova Milanese
+                </p>
             </div>
-            <div class="location-item">
-                Bruzzano
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Bruzzano
+                </p>
             </div>
-            <div class="location-item">
-                Milano 2
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Milano 2
+                </p>
             </div>
-            <div class="location-item">
-                Vimodrone
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Vimodrone
+                </p>
             </div>
-            <div class="location-item">
-                Cologno Monzese
-            </div>
-            <div class="location-item">
-                Gessate
+            <div class="location-item dark:bg-gray-800">
+                <p class="text-xl text-gray-900 dark:text-white">
+                    Cologno Monzese
+                </p>
             </div>
         </div>
     </div>
