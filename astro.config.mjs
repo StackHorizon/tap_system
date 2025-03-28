@@ -1,9 +1,11 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import {defineConfig} from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-	vite: {
-		plugins: [tailwindcss()],
-	},
+    site: 'https://Codex22Paradox.github.io',
+    base: '/tap_system',
+    vite: {
+        plugins: [tailwindcss()],
+    },
 });
