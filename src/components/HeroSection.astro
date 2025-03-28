@@ -10,7 +10,7 @@ import Container from "./Container.astro"
     <Container>
         <div class="relative ml-auto">
             <div class="lg:w-3/4 text-center mx-auto">
-                <h1 class="text-gray-900 dark:text-white font-bold text-6xl md:text-6xl xl:text-8xl">
+                <h1 class="mt-5 text-gray-900 dark:text-white font-bold text-6xl md:text-6xl xl:text-8xl">
                     Tap System
                 </h1>
                 <p class="mt-5 text-2xl text-gray-900 dark:text-white leading-relaxed">
@@ -19,39 +19,42 @@ import Container from "./Container.astro"
                 <div
                         class="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 dark:border-gray-700 text-gray-900 dark:text-white sm:grid-cols-2 lg:grid-cols-2 lg:divide-y-0 xl:grid-cols-2"
                 >
+                    <!-- Sezione Chiamata -->
                     <a href="tel:+393513092439" class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-3xl hover:shadow-gray-600/10">
-                        <div class="relative flex items-center space-x-4 py-12 p-8">
+                        <div class="relative flex flex-wrap items-center justify-center sm:justify-start gap-4 py-12 p-8">
                             <img
                                     src="https://cdn-icons-png.flaticon.com/512/17910/17910500.png"
-                                    class="w-16 h-16"
+                                    class="w-16 h-16 flex-shrink-0"
                                     width="64"
                                     height="64"
                                     alt="phone illustration"
                             />
-                            <div class="text-left">
+                            <div class="text-left max-w-full">
                                 <h5 class="text-3xl mb-3 font-semibold text-gray-900 dark:text-white transition group-hover:text-secondary">
                                     Chiamaci
                                 </h5>
-                                <p class="text-xl ml-3 text-gray-900 dark:text-white">
+                                <p class="text-xl ml-3 text-gray-900 dark:text-white break-words">
                                     +39 351 309 2439
                                 </p>
                             </div>
                         </div>
                     </a>
+
+                    <!-- Sezione Email -->
                     <a href="mailto:tapsystemmilano@gmail.com" class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-                        <div class="relative flex items-center space-x-4 py-12 p-8">
+                        <div class="relative flex flex-wrap items-center justify-center sm:justify-start gap-4 py-12 p-8">
                             <img
                                     src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
-                                    class="w-16 h-16"
+                                    class="w-16 h-16 flex-shrink-0"
                                     width="64"
                                     height="64"
                                     alt="email illustration"
                             />
-                            <div class="text-left">
+                            <div class="text-left max-w-full">
                                 <h5 class="text-3xl mb-3 font-semibold text-gray-900 dark:text-white transition group-hover:text-secondary">
                                     Email
                                 </h5>
-                                <p class="text-xl ml-3 text-gray-900 dark:text-white">
+                                <p class="text-xl ml-3 text-gray-900 dark:text-white break-words">
                                     tapsystemmilano@gmail.com
                                 </p>
                             </div>
