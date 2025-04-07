@@ -1,5 +1,5 @@
 ---
-import { AstroFont } from 'astro-font';
+import {AstroFont} from 'astro-font';
 import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
 import Stats from '../components/Stats.astro';
@@ -12,37 +12,39 @@ import "../styles/global.css";
 <!doctype html>
 <html lang="en">
 <head>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<title>Tap System - Sostituzione Tapparelle Milano | Riparazione Tapparelle Elettriche e Assistenza</title>
-	<meta name="description" content="Tap System a Milano offre riparazione tapparelle elettriche e sostituzione tapparelle. Servizio rapido e professionale di assistenza tapparellista a Milano.">
-	<meta name="keywords" content="Riparazione Tapparelle elettriche Milano, Tapparelista Milano, Sostituzione tapparelle Milano, Riparazione tapparelle Milano, Riparazione e sostituzione tapparelle Milano, Assistenza e sostituzione tapparelle Milano">
-	<meta name="robots" content="index, follow">
-	<meta name="author" content="code22.servehttp.com">
-	<meta http-equiv="Content-Language" content="it">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8">
-	<meta name="google-site-verification" content="I5ps1vJtRD6Gfo4Un1c1lEVhLfiRB7cp8mJqCvRlYTQ" />
-	<AstroFont
-		config={[
-			{
-				src: [],
-				name: "Urbanist",
-				preload: true,
-				display: "swap",
-				selector: "html",
-				fallback: "sans-serif",
-				googleFontsURL: 'https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap',
-			},
-		]}
-	/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Tap System - Sostituzione Tapparelle Milano | Riparazione Tapparelle Elettriche e Assistenza</title>
+    <meta name="description"
+          content="Tap System a Milano offre riparazione tapparelle elettriche e sostituzione tapparelle. Servizio rapido e professionale di assistenza tapparellista a Milano.">
+    <meta name="keywords"
+          content="Riparazione Tapparelle elettriche Milano, Tapparelista Milano, Sostituzione tapparelle Milano, Riparazione tapparelle Milano, Riparazione e sostituzione tapparelle Milano, Assistenza e sostituzione tapparelle Milano">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="code22.servehttp.com">
+    <meta http-equiv="Content-Language" content="it">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="I5ps1vJtRD6Gfo4Un1c1lEVhLfiRB7cp8mJqCvRlYTQ"/>
+    <AstroFont
+            config={[
+                {
+                    src: [],
+                    name: "Urbanist",
+                    preload: true,
+                    display: "swap",
+                    selector: "html",
+                    fallback: "sans-serif",
+                    googleFontsURL: 'https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap',
+                },
+            ]}
+    />
 </head>
-<body class="bg-white dark:bg-gray-900 mt-5">
+<body class="bg-white dark:bg-gray-900">
 <Header/>
 <main class="space-y-30 mb-20">
-	<HeroSection/>
-	<Features/>
-	<Stats/>
-	<Posti/>
+    <HeroSection/>
+    <Features/>
+    <Stats/>
+    <Posti/>
 </main>
 <Footer/>
 </body>
