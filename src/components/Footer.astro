@@ -2,26 +2,31 @@
 import Container from "./Container.astro";
 ---
 
-<footer class="py-5 md:py-10">
+<footer class="bg-white dark:bg-gray-900 py-6">
 	<Container>
-		<div class="m-auto md:w-full lg:w-full xl:w-full">
-			<div class="flex flex-wrap items-center justify-between md:flex-nowrap">
-				<div class="flex w-full justify-center space-x-12 text-black dark:text-gray-400 sm:w-full md:justify-start">
-					<ul role="list" class="space-y-8">
-						<li>
-							<a href="https://code22.servehttp.com"
-							   class="flex items-center space-x-3 transition hover:text-primary"
-							   target="_blank">
-								<span>Powered by code22</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="m-auto mt-16 w-full space-y-6 text-center sm:mt-auto sm:w-full sm:text-left flex flex-col sm:flex-row sm:space-y-0 sm:space-x-4">
-					<span class="block text-black dark:text-gray-400">Partita iva: 04118930165</span>
-					<span class="block text-black dark:text-gray-400">Sede legale: Viale Brianza 6, Milano (MI) 20127</span>
-				</div>
+		<div class="flex flex-wrap items-center justify-between">
+			<!-- Link footer -->
+			<div class="flex space-x-6 text-blue-600 dark:text-blue-300">
+				<a href="/privacy-policy" class="hover:underline">Privacy Policy</a>
+				<a href="/cookie-policy" class="hover:underline">Cookies</a>
+				<a href="/termini-condizioni" class="hover:underline">Termini e Condizioni</a>
 			</div>
+
+			<!-- Informazioni aziendali -->
+			<div class="text-center text-sm text-gray-500 dark:text-gray-400">
+				<span class="block">Partita IVA: 04118930165</span>
+				<span class="block">Sede legale: Viale Brianza 6, Milano (MI) 20127</span>
+			</div>
+		</div>
+
+		<!-- Copyright e Sviluppatore -->
+		<div class="text-center mt-4 text-sm text-gray-500 dark:text-gray-400">
+			<p>
+				Tap System Bresso è responsabile dei servizi offerti, del trattamento dei dati del materiale fotografico e dei testi presenti su questo sito web.
+			</p>
+			<p>
+				Sviluppato da <a href="https://code22.servehttp.com" target="_blank" class="text-blue-600 dark:text-blue-300 hover:underline">code22</a> | &copy; {new Date().getFullYear()} Tap System Bresso. All Rights Reserved.
+			</p>
 		</div>
 	</Container>
 </footer>
