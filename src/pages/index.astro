@@ -1,5 +1,5 @@
 ---
-import {AstroFont} from 'astro-font';
+import {AstroFont } from 'astro-font';
 import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
 import Stats from '../components/Stats.astro';
@@ -52,6 +52,7 @@ import "../styles/global.css";
 <Footer/>
 </body>
 </html>
+
 <script>
     window.addEventListener("load", function(){
         window.cookieconsent.initialise({
@@ -79,20 +80,35 @@ import "../styles/global.css";
                 const didConsent = this.hasConsented();
                 if (didConsent) {
                     console.log("Cookies accettati");
-                    // Qui puoi caricare script di analytics o cookie di terze parti
+                    loadGoogleAnalytics(); // Carica Google Analytics se i cookie sono accettati
                 } else {
                     console.log("Cookies rifiutati");
-                    // Non caricare cookie non essenziali
+                    alert("Alcune funzionalità potrebbero non essere disponibili senza il consenso dei cookie.");
+                    // Non caricare script non essenziali, come Google Analytics
                 }
             },
             onStatusChange: function(status, chosenBefore) {
                 const didConsent = this.hasConsented();
                 if (didConsent) {
                     console.log("Consenso dato");
+                    loadGoogleAnalytics(); // Carica Google Analytics se il consenso viene dato in un secondo momento
                 } else {
                     console.log("Consenso negato");
                 }
             }
         });
     });
+
+    // Funzione per caricare Google Analytics
+    function loadGoogleAnalytics() {
+        const script = document.createElement('script');
+        script.src = "https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X";
+        script.onload = () => {
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function() { dataLayer.push(arguments); };
+            gtag('js', new Date());
+            gtag('config', 'UA-XXXXXXXXX-X');
+        };
+        document.head.appendChild(script);
+    }
 </script>
