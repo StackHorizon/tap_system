@@ -1,16 +1,18 @@
 ---
-import {AstroFont } from 'astro-font';
+import {AstroFont} from 'astro-font';
 import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
 import Stats from '../components/Stats.astro';
 import Features from '../components/Features.astro';
 import Posti from '../components/Posti.astro';
 import Header from '../components/Header.astro';
+import Carousel from '../components/Carousel.astro';
+import BeforeAfter from '../components/BeforeAfter.astro';
 import "../styles/global.css";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Tap System - Sostituzione Tapparelle Milano | Riparazione Tapparelle Elettriche e Assistenza</title>
@@ -38,12 +40,14 @@ import "../styles/global.css";
                 },
             ]}
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"/>
 </head>
 <body class="bg-white dark:bg-gray-900">
 <Header/>
 <main class="space-y-30 mb-20">
     <HeroSection/>
+    <Carousel/>
+    <BeforeAfter/>
     <Features/>
     <Stats/>
     <Posti/>
@@ -54,11 +58,11 @@ import "../styles/global.css";
 </html>
 
 <script>
-    window.addEventListener("load", function(){
+    window.addEventListener("load", function () {
         window.cookieconsent.initialise({
             palette: {
-                popup: { background: "#000" },
-                button: { background: "#0033f0" }
+                popup: {background: "#000"},
+                button: {background: "#0033f0"}
             },
             theme: "classic",
             position: "bottom-right",
@@ -87,7 +91,7 @@ import "../styles/global.css";
                     // Non caricare script non essenziali, come Google Analytics
                 }
             },
-            onStatusChange: function(status, chosenBefore) {
+            onStatusChange: function (status, chosenBefore) {
                 const didConsent = this.hasConsented();
                 if (didConsent) {
                     console.log("Consenso dato");
@@ -105,7 +109,9 @@ import "../styles/global.css";
         script.src = "https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X";
         script.onload = () => {
             window.dataLayer = window.dataLayer || [];
-            window.gtag = function() { dataLayer.push(arguments); };
+            window.gtag = function () {
+                dataLayer.push(arguments);
+            };
             gtag('js', new Date());
             gtag('config', 'UA-XXXXXXXXX-X');
         };
