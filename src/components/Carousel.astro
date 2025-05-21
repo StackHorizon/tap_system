@@ -6,12 +6,12 @@ import Container from "./Container.astro";
 const slides = [
     {
         image: "/images/Tap1.jpg",
-        alt: "Tapparelle in alluminio coibentato",
+        alt: "Furgone",
 
     },
     {
         image: "/images/Tap2.jpg",
-        alt: "Immagine tapparelle",
+        alt: "Furgone",
 
     },
     {
@@ -112,7 +112,7 @@ const slides = [
         const nextBtn = document.querySelector('.carousel-next');
         const indicators = document.querySelectorAll('.carousel-indicator');
 
-        let currentIndex = 1; // Modifica da 0 a 1 per partire dalla seconda slide
+        let currentIndex = 1; //da quale slide si vuole partire?
         const slideCount = slides.length;
         let interval: number;
 
